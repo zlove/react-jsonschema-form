@@ -4,7 +4,7 @@
   "private": true,
   "description": "monorepo for react-jsonschema-form and its themes",
   "scripts": {
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna bootstrap && npm run build",
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "changed": "lerna changed",
