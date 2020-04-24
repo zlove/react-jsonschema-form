@@ -4,7 +4,7 @@
   "private": true,
   "description": "monorepo for react-jsonschema-form and its themes",
   "scripts": {
-    "postinstall": "lerna bootstrap && npm run build",
+    "postinstall": "npm run build:partial",
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "changed": "lerna changed",
@@ -13,6 +13,7 @@
     "cs-check": "lerna run cs-check",
     "cs-format": "lerna run cs-format",
     "build": "lerna run --stream build",
+    "build:partial": "cd packages/core && npm run build && cd ../semantic-ui && npm run build",
     "start": "lerna run start --stream --parallel"
   },
   "dependencies": {
