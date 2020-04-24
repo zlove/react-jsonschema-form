@@ -44,7 +44,7 @@
     "@rjsf/semantic-ui": "^2.0.0-alpha.4",
     "ajv": "^6.7.0",
     "core-js": "^2.5.7",
-    "json-schema-merge-allof": "^0.6.0",
+    "json-schema-merge-allof": "https://github.com/zlove/json-schema-merge-allof",
     "jss": "^10.0.3",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
