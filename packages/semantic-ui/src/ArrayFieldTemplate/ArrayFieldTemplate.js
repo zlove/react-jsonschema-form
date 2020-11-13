@@ -124,6 +124,7 @@ function DefaultFixedArrayFieldTemplate({
 }) {
   const fieldTitle = uiSchema["ui:title"] || title;
   const fieldDescription = uiSchema["ui:description"] || schema.description;
+  const addItemLabel = uiSchema["ui:addItemLabel"] || "Add Item";
 
   return (
     <div className={cleanClassNames([className, classNames])}>
@@ -150,12 +151,13 @@ function DefaultFixedArrayFieldTemplate({
 
         {canAdd && (
           <div
+            className="array-actions"
             style={{
               marginTop: "1rem",
               position: "relative",
               textAlign: "right",
             }}>
-            <AddButton onClick={onAddClick} disabled={disabled || readOnly} />
+            <AddButton label={addItemLabel} onClick={onAddClick} disabled={disabled || readOnly} />
           </div>
         )}
       </div>
@@ -182,6 +184,8 @@ function DefaultNormalArrayFieldTemplate({
 }) {
   const fieldTitle = uiSchema["ui:title"] || title;
   const fieldDescription = uiSchema["ui:description"] || schema.description;
+  const addItemLabel = uiSchema["ui:addItemLabel"] || "Add Item";
+
   return (
     <div
       className={cleanClassNames([
@@ -213,12 +217,13 @@ function DefaultNormalArrayFieldTemplate({
 
         {canAdd && (
           <div
+            className="array-actions"
             style={{
               marginTop: "1rem",
               position: "relative",
               textAlign: "right",
             }}>
-            <AddButton onClick={onAddClick} disabled={disabled || readOnly} />
+            <AddButton label={addItemLabel} onClick={onAddClick} disabled={disabled || readOnly} />
           </div>
         )}
       </div>
